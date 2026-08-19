@@ -1,0 +1,33 @@
+class MinStack {
+    constructor() {}
+    arr = []
+    /**
+     * @param {number} val
+     * @return {void}
+     */
+    push(val) {
+        const minVal = this.arr[arr.length - 1].min
+        this.arr.push({value: val, min: minVal > val ? val : minVal})
+    }
+
+    /**
+     * @return {void}
+     */
+    pop() {
+        this.arr.pop();
+    }
+
+    /**
+     * @return {number}
+     */
+    top() {
+        return this.arr[this.arr.length - 1]
+    }
+
+    /**
+     * @return {number}
+     */
+    getMin() {
+        return this.arr.at(-1).min
+    }
+}
